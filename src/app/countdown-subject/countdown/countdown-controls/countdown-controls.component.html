@@ -1,0 +1,20 @@
+
+<div class="container">
+    <form>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="item-input">Enter Time Limit  : </label>
+        </div>
+        <div class="col-md-6">
+            <input type="number" id="item-input" #newItem>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-8 offset-4">
+                <button type="button" class="btn btn-primary" (click)="createNewTimer(newItem.value)">{{buttonFlag? "Pause":"Start"}}</button>
+                <!-- <button  type="reset" class="btn btn-secondary" (click)="toReset(true); ">Reset</button> -->
+        </div>
+    </div>
+</form>
+</div>

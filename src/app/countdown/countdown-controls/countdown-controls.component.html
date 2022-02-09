@@ -1,0 +1,22 @@
+<div class="container">
+    <form>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="item-input">Enter Time Limit : </label>
+            </div>
+            <div class="col-md-6">
+                <input type="number" required id="item-input" #newItem [(ngModel)]="timer" name="timer" [disabled]='inputDisabled'>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-8 offset-4">
+                <button type="button" class="btn btn-primary" [disabled]='timer === "" && !enableButton '(click)="createNewTimer(newItem.value)">
+                    <i *ngIf="!buttonFlag" class="fa fa-play"></i> <i *ngIf="buttonFlag" class="fa fa-pause">
+                    </i> {{buttonFlag? "Pause":"Start"}}</button>
+                <button type="button" class="btn btn-secondary" (click)="toReset(true); "> <i
+                        class="fa fa-refresh"></i>Reset</button>
+            </div>
+        </div>
+    </form>
+</div>

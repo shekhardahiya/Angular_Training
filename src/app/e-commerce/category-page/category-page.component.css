@@ -1,0 +1,47 @@
+.dropdownbtn{
+    width: 100%;
+}
+.dropdownbtn:hover{
+    background-color: khaki;
+}
+.gridImages{
+    height: 200px;
+    width:260px
+}
+.listImages{
+    height: 300px;
+    width: 300px;
+}
+
+.card{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  cursor: pointer;
+}
+
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.controlbtn{
+    margin-top: 10px;
+}
+.checked {
+    color: orange;
+  }
+.description{
+    position: absolute;
+    bottom: 20px;
+    font-size: larger;
+}
+.price{
+    position: absolute;
+    top: 75px;
+    font-size: larger;
+}
+.name{
+    font-size: larger;
+}
+

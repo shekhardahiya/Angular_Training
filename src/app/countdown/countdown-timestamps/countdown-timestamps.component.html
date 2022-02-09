@@ -1,0 +1,10 @@
+
+
+<div  *ngFor="let stamp of allstamps" >
+    <div [ngClass]="stamp.flag?'text-danger':'text-primary'">
+        <i *ngIf="!stamp.flag && stamp!==allstamps[0]" class="fa fa-play"></i> 
+        <i *ngIf="stamp.flag" class="fa fa-pause">
+        </i> {{getStamp(stamp)}}
+    </div>
+
+</div>

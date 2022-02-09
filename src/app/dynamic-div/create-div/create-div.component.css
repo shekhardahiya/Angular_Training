@@ -1,0 +1,21 @@
+#content {
+    width: 100%;
+    height: 1300px;
+  }
+  .contentInside {
+    width: 200px;
+    height: 200px;
+    margin: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+  }
+  .divBtn{
+    cursor: pointer;
+  }
+  .modalBodyContent{
+    color: #6f100b;
+  }

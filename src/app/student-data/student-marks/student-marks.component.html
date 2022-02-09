@@ -1,0 +1,26 @@
+<div class="container tableData">
+  <div class="table-responsive">
+    <table class="table table-bordered border-primary table-hover table-striped">
+        <thead class="table-primary">
+          <tr >
+            <th *ngFor="let header of tableHeader" (click)="sortData(header,$event)" class="text-capitalize text-center header" >
+               {{header}}
+               <i *ngIf="currentColumnName==header && counter == 1"class='fa fa-angle-up'></i>
+               <i *ngIf="currentColumnName==header && counter == 2"class='fas fa-angle-down'></i>
+              </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of studentData ">
+            <td class="text-center">{{student.id}}</td>
+            <td class="text-center">{{student.name}}</td>
+            <td class="text-center">{{student.class}}</td>
+            <td class="text-center"> {{student.section}}</td>
+            <td class="text-center">{{student.subject_1}}</td>
+            <td class="text-center">{{student.subject_2}}</td>
+            <td class="text-center">{{student.subject_3}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

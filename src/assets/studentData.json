@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "senpai",
+        "class": "3",
+        "section": "A",
+        "subject_1": 10,
+        "subject_2": 9,
+        "subject_3": 8
+         },
+    {
+        "id": 2,
+        "name": "Ram",
+        "class": "2",
+        "section": "B",
+        "subject_1": 5,
+        "subject_2": 2,
+        "subject_3": 6
+         },
+    {
+        "id": 3,
+        "name": "Lakhsman",
+        "class": "4",
+        "section": "C",
+        "subject_1": 2,
+        "subject_2": 9,
+        "subject_3": 8
+         },
+    {
+        "id": 4,
+        "name": "seeta",
+        "class": "8",
+        "section": "D",
+        "subject_1": 8,
+        "subject_2": 0,
+        "subject_3": 4
+         },
+    {
+        "id": 5,
+        "name": "Geeta",
+        "class": "4",
+        "section": "E",
+        "subject_1": 7,
+        "subject_2": 3,
+        "subject_3": 7
+         },
+    {
+        "id": 6,
+        "name": "Arun",
+        "class": "9",
+        "section": "A",
+        "subject_1": 50,
+        "subject_2": 2,
+        "subject_3": 1
+         }
+]

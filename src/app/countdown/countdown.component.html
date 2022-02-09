@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="card cardParent">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="card cardChild">
+            <div class="card-body">
+              <app-countdown-display (startPauseFlag)="startPauseFlagEmit($event)" [toDisplay]="value" [flags]=flag [resetFlag]="resetFlag"></app-countdown-display>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card cardChild">
+            <div class="card-body">
+              <app-countdown-controls (newTimerEmit)="addItem($event)" (pauseFlag)="showFlag($event)"
+                (timeStampObj)="showTimeStamp($event)" (resetFlag)="resetFlagValue($event)" [startPauseFlag1]="startPauseFlag1">
+              </app-countdown-controls>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card cardChild">
+            <div class="card-body">
+              <app-countdown-timestamps [timeStampshow]="timeStamp"></app-countdown-timestamps>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card cardChild">
+            <div class="card-body">
+              <app-countdown-logs [timeStampshow]="timeStamp"></app-countdown-logs>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

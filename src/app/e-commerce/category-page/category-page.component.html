@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row controlbtn">
+    <div class="col-md-2 offset-8">
+      <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" (click)="cons('grid')"
+        checked>
+      <label class="btn btn-warning" for="option1">Grid <i class='fa fa-th-large'></i></label>
+      <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" (click)="cons('col')">
+      <label class="btn btn-warning" for="option2">List <i class='fa fa-bars'></i></label>
+    </div>
+    <div class="col-md-2">
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown link
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li><button type="button" class="btn btn-light dropdownbtn" (click)="sort('Low')"> Low To High</button></li>
+          <li><button type="button" class="btn btn-light dropdownbtn" (click)="sort('High')">High To Low</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row ">
+    <div [ngClass]="grid ? 'col-md-3' : 'col-md-12'" *ngFor=" let product of productData">
+      <div  *ngIf="grid" class="card" >
+        <img [ngClass]="grid ? 'gridImages' : 'listImages'" src={{product.image}} alt="{{product.title}}" class="card-img-top">
+        <div  class="card-body">
+          <div class="nameGrid"><span>Product Name: </span> {{product.title}}
+          </div>
+          <div class="priceGrid"> <span>Price: </span>{{product.price|currency:'INR'}}
+          </div>
+          <!-- <div class="descriptionGrid"> <span> Description: </span> {{product.description}}</div> -->
+          <div></div>
+        </div>
+      </div>
+      <div *ngIf="!grid" class="card">
+        <div class="row">
+          <div class="col-md-4">
+            <img [ngClass]="grid ? 'gridImages' : 'listImages'" src={{product.image}} alt="{{product.title}}" class="card-img-top">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body ">
+              <div class="name"><span>Product Name: </span> {{product.title}}
+              </div>
+              <div class="price"> <span>Price: </span>{{product.price|currency:'INR'}}
+              </div>
+              <div class="description"> <span> Description: </span> {{product.description}}</div>
+              <div></div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+<!-- Rating: <span *ngFor="let p of product.rating" class="fa fa-star checked">p</span> -->
